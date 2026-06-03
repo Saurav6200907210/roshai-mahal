@@ -107,10 +107,10 @@ export function Menu() {
                 </div>
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-3">
-                    <h3 className="font-display text-xl leading-tight">{m.name}</h3>
-                    <span className="shrink-0 text-gradient-gold font-display text-lg">₹{m.price}</span>
+                    <h3 className="font-display text-lg leading-tight">{m.name}</h3>
+                    <span className="shrink-0 text-gradient-gold font-display text-lg whitespace-nowrap">₹{m.price}</span>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{m.desc}</p>
+                  {m.desc && <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{m.desc}</p>}
                   <div className="mt-4 flex items-center justify-between">
                     <span className="inline-flex items-center gap-1 text-[11px] uppercase tracking-widest text-muted-foreground">
                       <Leaf size={12} /> {m.category}
