@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, UtensilsCrossed, CalendarHeart } from "lucide-react";
+import { ChevronDown, UtensilsCrossed, BookOpen } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import { RESTAURANT } from "@/lib/restaurant";
+import { MenuModal } from "./MenuModal";
 
 export function Hero() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <section id="home" className="relative isolate min-h-[100svh] overflow-hidden">
       {/* Background */}
@@ -45,7 +49,7 @@ export function Hero() {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs uppercase tracking-[0.3em] text-primary"
         >
-          ✦ Premium Family Restaurant ✦
+          ✦ Premium Family A.C Restaurant ✦
         </motion.span>
 
         <motion.h1
@@ -80,12 +84,13 @@ export function Hero() {
           >
             <UtensilsCrossed size={16} /> View Menu
           </a>
-          <a
-            href="#book"
+          <button
+            type="button"
+            onClick={() => setMenuOpen(true)}
             className="group inline-flex items-center gap-2 rounded-full border border-primary/40 bg-background/30 px-7 py-3 text-sm font-semibold text-foreground backdrop-blur-md transition hover:border-primary hover:bg-primary/10"
           >
-            <CalendarHeart size={16} /> Book a Table
-          </a>
+            <BookOpen size={16} /> Menu PDF & WhatsApp
+          </button>
         </motion.div>
 
         <motion.div
@@ -97,6 +102,8 @@ export function Hero() {
           <ChevronDown className="animate-bounce" />
         </motion.div>
       </div>
+
+      <MenuModal open={menuOpen} onClose={() => setMenuOpen(false)} />
     </section>
   );
 }

@@ -10,6 +10,7 @@ import { BookingContact } from "@/components/BookingContact";
 import { FAQ } from "@/components/FAQ";
 import { Newsletter } from "@/components/Newsletter";
 import { Footer } from "@/components/Footer";
+import { VideoShowcase } from "@/components/VideoShowcase";
 import { FloatingActions } from "@/components/FloatingActions";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { CustomCursor } from "@/components/CustomCursor";
@@ -81,6 +82,7 @@ function Index() {
         <Hero />
         <About />
         <Menu />
+        <VideoShowcase />
         <Gallery />
         <Testimonials />
         <BookingContact />
