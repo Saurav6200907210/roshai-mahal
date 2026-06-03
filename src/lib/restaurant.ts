@@ -1,11 +1,21 @@
+import v1 from "@/assets/videos/v1.mp4.asset.json";
+import v2 from "@/assets/videos/v2.mp4.asset.json";
+import v3 from "@/assets/videos/v3.mp4.asset.json";
+import v4 from "@/assets/videos/v4.mp4.asset.json";
+import v5 from "@/assets/videos/v5.mp4.asset.json";
+import menuCard from "@/assets/brochure/menu-card.png.asset.json";
+import eventBrochure from "@/assets/brochure/event-brochure.png.asset.json";
+
 export const RESTAURANT = {
   name: "Rosahai Mahal Teghra",
   tagline: "Where Royalty Meets Flavor",
-  address: "Near St. Paul Public School, Teghra, Begusarai, Bihar 851133",
+  address: "Station Road, Near St. Paul Public School, Teghra, Begusarai, Bihar 851133",
   shortAddress: "Teghra, Begusarai, Bihar",
-  phone: "+91 90000 00000",
-  phoneRaw: "+919000000000",
-  whatsapp: "919000000000",
+  phone: "+91 97985 07612",
+  phoneRaw: "+919798507612",
+  phoneAlt: ["+91 96933 14686", "+91 76339 89833", "+91 62053 48886", "+91 77356 54659"],
+  whatsapp: "916200907210",
+  whatsappDisplay: "+91 62009 07210",
   email: "hello@rosahaimahal.com",
   hours: "11:00 AM – 11:00 PM (All days)",
   mapsEmbed:
@@ -18,6 +28,19 @@ export const RESTAURANT = {
     youtube: "https://youtube.com/",
   },
 };
+
+export const VIDEOS = [
+  { src: v1.url, title: "Royal Ambience" },
+  { src: v2.url, title: "Signature Dishes" },
+  { src: v3.url, title: "Family Dining" },
+  { src: v4.url, title: "Banquet & Events" },
+  { src: v5.url, title: "Chef's Special" },
+];
+
+export const MENU_CARDS = [
+  { url: menuCard.url, title: "Menu Card" },
+  { url: eventBrochure.url, title: "Banquet, Rooms & Events" },
+];
 
 export type Category =
   | "All"
