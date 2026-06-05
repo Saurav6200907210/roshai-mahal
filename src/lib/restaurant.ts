@@ -5,6 +5,14 @@ import v4 from "@/assets/videos/v4.mp4.asset.json";
 import v5 from "@/assets/videos/v5.mp4.asset.json";
 import menuCard from "@/assets/brochure/menu-card.png.asset.json";
 import eventBrochure from "@/assets/brochure/event-brochure.png.asset.json";
+import g3 from "@/assets/gallery/g3.png.asset.json";
+import g4 from "@/assets/gallery/g4.png.asset.json";
+import g5 from "@/assets/gallery/g5.png.asset.json";
+import g6 from "@/assets/gallery/g6.png.asset.json";
+import g7 from "@/assets/gallery/g7.png.asset.json";
+import g8 from "@/assets/gallery/g8.png.asset.json";
+import g9 from "@/assets/gallery/g9.png.asset.json";
+import g10 from "@/assets/gallery/g10.png.asset.json";
 
 export const RESTAURANT = {
   name: "Rosahai Mahal Teghra",
