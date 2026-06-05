@@ -243,15 +243,15 @@ export const MENU: MenuItem[] = [
 
   // Roti / Naan
   { name: "Tandoori Roti (Plain/Butter)", price: "15/20", category: "Roti / Naan", veg: true, image: IMG.tandooriRoti, desc: "Clay-oven baked whole-wheat roti." },
-  { name: "Naan (Plain/Butter)", price: "40/50", category: "Roti / Naan", veg: true, image: IMG.naan, desc: "Soft tandoor-baked naan." },
+  { name: "Naan (Plain/Butter)", price: "40/50", category: "Roti / Naan", veg: true, image: IMG.naanPlain, desc: "Soft tandoor-baked naan." },
   { name: "Missi Roti", price: "40", category: "Roti / Naan", veg: true, image: IMG.tandooriRoti, desc: "Spiced gram-flour roti." },
   { name: "Lachha Paratha", price: "40", category: "Roti / Naan", veg: true, image: IMG.lachhaParatha, desc: "Flaky multilayered paratha." },
-  { name: "Kulcha (Plain/Masala)", price: "40/50", category: "Roti / Naan", veg: true, image: IMG.naan, desc: "Soft Amritsari-style kulcha." },
+  { name: "Kulcha (Plain/Masala)", price: "40/50", category: "Roti / Naan", veg: true, image: IMG.naanPlain, desc: "Soft Amritsari-style kulcha." },
   { name: "Mughlai Paratha (Veg/Non-Veg)", price: "40/60", category: "Roti / Naan", veg: true, image: IMG.lachhaParatha, desc: "Stuffed and fried Mughlai paratha." },
-  { name: "Stuff Naan", price: "70", category: "Roti / Naan", veg: true, image: IMG.naan, desc: "Naan stuffed with chef's filling." },
+  { name: "Stuff Naan", price: "70", category: "Roti / Naan", veg: true, image: IMG.naanPlain, desc: "Naan stuffed with chef's filling." },
   { name: "Aloo Paratha", price: "50", category: "Roti / Naan", veg: true, image: IMG.aloosParatha, desc: "Whole-wheat paratha with spiced potato." },
   { name: "Garlic Naan", price: "70", category: "Roti / Naan", veg: true, popular: true, image: IMG.garlicNaan, desc: "Tandoor naan topped with garlic & coriander." },
-  { name: "Special Naan", price: "90", category: "Roti / Naan", veg: true, image: IMG.naan, desc: "Chef's premium stuffed naan." },
+  { name: "Special Naan", price: "90", category: "Roti / Naan", veg: true, image: IMG.naanPlain, desc: "Chef's premium stuffed naan." },
   { name: "Tawa Roti (Plain/Butter)", price: "10", category: "Roti / Naan", veg: true, image: IMG.tandooriRoti, desc: "Skillet-cooked whole-wheat roti." },
   { name: "Paneer Paratha", price: "60", category: "Roti / Naan", veg: true, image: IMG.paneerParatha, desc: "Paratha stuffed with spiced paneer." },
   { name: "Paneer Kulcha", price: "60", category: "Roti / Naan", veg: true, image: IMG.paneerKulcha, desc: "Kulcha stuffed with paneer." },
@@ -322,7 +322,7 @@ export const MENU: MenuItem[] = [
   { name: "Egg Roll", price: "60", category: "Egg Items", veg: false, image: IMG.eggRoll, desc: "Egg-coated paratha kathi roll." },
   { name: "Egg Pakoda", price: "120", category: "Egg Items", veg: false, image: IMG.eggBhurji, desc: "Crispy battered egg pakoda." },
   { name: "Baby Corn", price: "250", category: "Egg Items", veg: true, image: IMG.babyCorn, desc: "Crispy baby corn starter." },
-  { name: "Mushroom Kurkure", price: "220", category: "Egg Items", veg: true, image: IMG.mushroom, desc: "Crunchy mushroom kurkure." },
+  { name: "Mushroom Kurkure", price: "220", category: "Egg Items", veg: true, image: IMG.mushroomKurkure, desc: "Crunchy mushroom kurkure." },
 
   // Veg Items
   { name: "Veg Biryani", price: "60", category: "Veg Items", veg: true, image: IMG.vegBiryani, desc: "Veg biryani — single plate." },
@@ -334,13 +334,13 @@ export const MENU: MenuItem[] = [
   { name: "Onion Pakoda", price: "120", category: "Veg Items", veg: true, image: IMG.onionPakoda, desc: "Crispy onion fritters." },
 
   // Chinese Veg Items
-  { name: "Mix Chowmein (Non-Veg)", price: "240", category: "Chinese Veg Items", veg: false, image: IMG.chowmein, desc: "Wok-tossed mixed non-veg noodles." },
-  { name: "Hakka Chowmein", price: "200", category: "Chinese Veg Items", veg: true, popular: true, image: IMG.chowmein, desc: "Classic veg hakka noodles." },
-  { name: "American Chop Suey", price: "220", category: "Chinese Veg Items", veg: true, image: IMG.chopSuey, desc: "Crispy noodles in sweet-tangy sauce." },
-  { name: "Hakka Chowmein (Non-Veg)", price: "230", category: "Chinese Veg Items", veg: false, image: IMG.chowmein, desc: "Hakka noodles with chicken & egg." },
-  { name: "Maharaja Chilli", price: "250", category: "Chinese Veg Items", veg: true, image: IMG.vegChilli, desc: "Chef's special maharaja chilli." },
+  { name: "Mix Chowmein (Non-Veg)", price: "240", category: "Chinese Veg Items", veg: false, image: IMG.hakkaChowmein, desc: "Wok-tossed mixed non-veg noodles." },
+  { name: "Hakka Chowmein", price: "200", category: "Chinese Veg Items", veg: true, popular: true, image: IMG.hakkaChowmein, desc: "Classic veg hakka noodles." },
+  { name: "American Chop Suey", price: "220", category: "Chinese Veg Items", veg: true, image: IMG.americanChopSuey, desc: "Crispy noodles in sweet-tangy sauce." },
+  { name: "Hakka Chowmein (Non-Veg)", price: "230", category: "Chinese Veg Items", veg: false, image: IMG.hakkaChowmein, desc: "Hakka noodles with chicken & egg." },
+  { name: "Maharaja Chilli", price: "250", category: "Chinese Veg Items", veg: true, image: IMG.vegetableChilli, desc: "Chef's special maharaja chilli." },
   { name: "Babycorn Chilli", price: "250", category: "Chinese Veg Items", veg: true, image: IMG.babycornChilli, desc: "Crispy babycorn in chilli sauce." },
-  { name: "Vegetable Chilli", price: "150", category: "Chinese Veg Items", veg: true, image: IMG.vegChilli, desc: "Mixed veg tossed in chilli sauce." },
+  { name: "Vegetable Chilli", price: "150", category: "Chinese Veg Items", veg: true, image: IMG.vegetableChilli, desc: "Mixed veg tossed in chilli sauce." },
 ];
 
 export const CATEGORIES: Category[] = [
