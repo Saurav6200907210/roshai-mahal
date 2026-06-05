@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Search, Star, Leaf } from "lucide-react";
-import { CATEGORIES, MENU, RESTAURANT, type Category } from "@/lib/restaurant";
+import { CATEGORIES, MENU, waLink, type Category } from "@/lib/restaurant";
 import { Reveal } from "./Reveal";
 
 export function Menu() {
