@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MessageCircle, Phone, Download } from "lucide-react";
-import { MENU_CARDS, RESTAURANT } from "@/lib/restaurant";
+import { MENU_CARDS, RESTAURANT, waLink } from "@/lib/restaurant";
 
 export function MenuModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   useEffect(() => {
