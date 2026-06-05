@@ -5,6 +5,14 @@ import v4 from "@/assets/videos/v4.mp4.asset.json";
 import v5 from "@/assets/videos/v5.mp4.asset.json";
 import menuCard from "@/assets/brochure/menu-card.png.asset.json";
 import eventBrochure from "@/assets/brochure/event-brochure.png.asset.json";
+import g3 from "@/assets/gallery/g3.png.asset.json";
+import g4 from "@/assets/gallery/g4.png.asset.json";
+import g5 from "@/assets/gallery/g5.png.asset.json";
+import g6 from "@/assets/gallery/g6.png.asset.json";
+import g7 from "@/assets/gallery/g7.png.asset.json";
+import g8 from "@/assets/gallery/g8.png.asset.json";
+import g9 from "@/assets/gallery/g9.png.asset.json";
+import g10 from "@/assets/gallery/g10.png.asset.json";
 
 export const RESTAURANT = {
   name: "Rosahai Mahal Teghra",
@@ -285,14 +293,18 @@ export const CATEGORIES: Category[] = [
 ];
 
 export const GALLERY = [
+  g4.url,
+  g3.url,
+  g5.url,
+  g8.url,
+  g6.url,
+  g7.url,
+  g9.url,
+  g10.url,
   "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=70",
   "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=70",
   "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=70",
   "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=70",
-  "https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?auto=format&fit=crop&w=900&q=70",
-  "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=900&q=70",
-  "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=70",
-  "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=70",
 ];
 
 export const TESTIMONIALS = [
