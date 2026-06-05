@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, MessageCircle, Phone, Download } from "lucide-react";
-import { MENU_CARDS, RESTAURANT } from "@/lib/restaurant";
+import { MENU_CARDS, RESTAURANT, waLink } from "@/lib/restaurant";
 
 export function MenuModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   useEffect(() => {
@@ -64,7 +64,7 @@ export function MenuModal({ open, onClose }: { open: boolean; onClose: () => voi
 
             <div className="flex flex-wrap items-center justify-center gap-3 border-t border-border bg-gradient-luxe p-4">
               <a
-                href={`https://wa.me/${RESTAURANT.whatsapp}?text=${encodeURIComponent("Hi Rosahai Mahal, please share the latest menu.")}`}
+                href={waLink("Hi Rosahai Mahal, please share the latest menu.")}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-deep transition hover:scale-105"

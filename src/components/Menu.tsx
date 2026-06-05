@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Search, Star, Leaf } from "lucide-react";
-import { CATEGORIES, MENU, RESTAURANT, type Category } from "@/lib/restaurant";
+import { CATEGORIES, MENU, waLink, type Category } from "@/lib/restaurant";
 import { Reveal } from "./Reveal";
 
 export function Menu() {
@@ -116,9 +116,7 @@ export function Menu() {
                       <Leaf size={12} /> {m.category}
                     </span>
                     <a
-                      href={`https://wa.me/${RESTAURANT.whatsapp}?text=${encodeURIComponent(
-                        `Hi Rosahai Mahal, I'd like to order: ${m.name} (₹${m.price})`
-                      )}`}
+                      href={waLink(`Hi Rosahai Mahal, I'd like to order: ${m.name} (₹${m.price})`)}
                       target="_blank"
                       rel="noreferrer"
                       className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"

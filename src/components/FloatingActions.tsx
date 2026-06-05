@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, CalendarHeart } from "lucide-react";
-import { RESTAURANT } from "@/lib/restaurant";
+import { waLink } from "@/lib/restaurant";
 
 export function FloatingActions() {
   return (
@@ -9,7 +9,7 @@ export function FloatingActions() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5 }}
-        href={`https://wa.me/${RESTAURANT.whatsapp}?text=${encodeURIComponent("Hi Rosahai Mahal, I'd like to order food.")}`}
+        href={waLink("Hi Rosahai Mahal, I'd like to order food.")}
         target="_blank"
         rel="noreferrer"
         aria-label="Chat on WhatsApp"

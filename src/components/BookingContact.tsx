@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
-import { RESTAURANT } from "@/lib/restaurant";
+import { RESTAURANT, waLink } from "@/lib/restaurant";
 import { Reveal } from "./Reveal";
 
 export function BookingContact() {
@@ -13,8 +13,8 @@ export function BookingContact() {
       toast.error("Please fill name, phone and date.");
       return;
     }
-    const msg = `Hello Rosahai Mahal, I'd like to book a table.%0A%0AName: ${form.name}%0APhone: ${form.phone}%0ADate: ${form.date}%0ATime: ${form.time}%0AGuests: ${form.guests}%0ANote: ${form.note}`;
-    window.open(`https://wa.me/${RESTAURANT.whatsapp}?text=${msg}`, "_blank");
+    const msg = `Hello Rosahai Mahal, I'd like to book a table.\n\nName: ${form.name}\nPhone: ${form.phone}\nDate: ${form.date}\nTime: ${form.time}\nGuests: ${form.guests}\nNote: ${form.note}`;
+    window.open(waLink(msg), "_blank");
     toast.success("Opening WhatsApp to confirm your booking…");
   }
 

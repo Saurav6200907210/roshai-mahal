@@ -3,7 +3,7 @@ import v2 from "@/assets/videos/v2.mp4.asset.json";
 import v3 from "@/assets/videos/v3.mp4.asset.json";
 import v4 from "@/assets/videos/v4.mp4.asset.json";
 import v5 from "@/assets/videos/v5.mp4.asset.json";
-import menuCard from "@/assets/brochure/menu-card.png.asset.json";
+import menuCard from "@/assets/brochure/menu-actual.png.asset.json";
 import eventBrochure from "@/assets/brochure/event-brochure.png.asset.json";
 import g3 from "@/assets/gallery/g3.png.asset.json";
 import g4 from "@/assets/gallery/g4.png.asset.json";
@@ -36,6 +36,10 @@ export const RESTAURANT = {
     youtube: "https://youtube.com/",
   },
 };
+
+export function waLink(text: string) {
+  return `https://web.whatsapp.com/send?phone=${RESTAURANT.whatsapp}&text=${encodeURIComponent(text)}`;
+}
 
 export const VIDEOS = [
   { src: v1.url, title: "Royal Ambience" },
