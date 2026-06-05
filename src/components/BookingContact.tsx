@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
-import { RESTAURANT } from "@/lib/restaurant";
+import { RESTAURANT, waLink } from "@/lib/restaurant";
 import { Reveal } from "./Reveal";
 
 export function BookingContact() {
