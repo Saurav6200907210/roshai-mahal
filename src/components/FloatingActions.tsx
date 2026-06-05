@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { MessageCircle, CalendarHeart } from "lucide-react";
-import { RESTAURANT } from "@/lib/restaurant";
+import { waLink } from "@/lib/restaurant";
 
 export function FloatingActions() {
   return (
