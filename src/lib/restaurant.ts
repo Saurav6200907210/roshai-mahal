@@ -37,6 +37,10 @@ export const RESTAURANT = {
   },
 };
 
+export function waLink(text: string) {
+  return `https://web.whatsapp.com/send?phone=${RESTAURANT.whatsapp}&text=${encodeURIComponent(text)}`;
+}
+
 export const VIDEOS = [
   { src: v1.url, title: "Royal Ambience" },
   { src: v2.url, title: "Signature Dishes" },
