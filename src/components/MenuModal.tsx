@@ -51,8 +51,8 @@ export function MenuModal({ open, onClose }: { open: boolean; onClose: () => voi
             <div className="max-h-[60vh] overflow-y-auto p-4 sm:p-6">
               <div className="grid gap-5 md:grid-cols-2">
                 {MENU_CARDS.map((c) => (
-                  <a key={c.url} href={c.url} target="_blank" rel="noreferrer" className="group block overflow-hidden rounded-2xl border border-border bg-background/40">
-                    <img src={c.url} alt={c.title} loading="lazy" className="h-auto w-full object-contain transition duration-500 group-hover:scale-[1.02]" />
+                  <a key={c.url} href={c.url} target="_blank" rel="noopener noreferrer" className="group block overflow-hidden rounded-2xl border border-border bg-background/40">
+                    <img src={c.url} alt={c.title} loading="lazy" width={900} height={1200} className="h-auto w-full object-contain transition duration-500 group-hover:scale-[1.02]" />
                     <div className="flex items-center justify-between gap-2 p-3 text-sm">
                       <span className="text-foreground/90">{c.title}</span>
                       <span className="inline-flex items-center gap-1 text-xs text-primary"><Download size={12}/> Open</span>
@@ -66,8 +66,8 @@ export function MenuModal({ open, onClose }: { open: boolean; onClose: () => voi
               <a
                 href={waLink("Hi Rosahai Mahal, please share the latest menu.")}
                 target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-deep transition hover:scale-105"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground shadow-deep transition hover:scale-105"
               >
                 <MessageCircle size={16} /> WhatsApp {RESTAURANT.whatsappDisplay}
               </a>

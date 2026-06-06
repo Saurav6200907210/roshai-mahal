@@ -118,7 +118,7 @@ export function Menu() {
                     <a
                       href={waLink(`Hi Rosahai Mahal, I'd like to order: ${m.name} (₹${m.price})`)}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"
                     >
                       Order

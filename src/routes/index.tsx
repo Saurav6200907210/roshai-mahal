@@ -13,11 +13,9 @@ import { Footer } from "@/components/Footer";
 import { VideoShowcase } from "@/components/VideoShowcase";
 import { FloatingActions } from "@/components/FloatingActions";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import { CustomCursor } from "@/components/CustomCursor";
-import { Loader } from "@/components/Loader";
 import { RESTAURANT } from "@/lib/restaurant";
 
-const TITLE = "Rosahai Mahal Teghra | Premium Family Restaurant in Begusarai, Bihar";
+const TITLE = "Rosahai Mahal Teghra | Family Restaurant";
 const DESC = "Rosahai Mahal Teghra — a luxury family restaurant near St. Paul Public School, Teghra, Begusarai. Royal biryanis, tandoor, Chinese, thali & desserts. Book a table or order on WhatsApp.";
 
 const SCHEMA = {
@@ -59,9 +57,6 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "/" },
       { rel: "preconnect", href: "https://images.unsplash.com" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" },
     ],
     scripts: [
       { type: "application/ld+json", children: JSON.stringify(SCHEMA) },
@@ -73,9 +68,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      <Loader />
       <ScrollProgress />
-      <CustomCursor />
       <Toaster theme="dark" position="top-center" richColors />
       <Navbar />
       <main>

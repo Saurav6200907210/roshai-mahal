@@ -1,5 +1,5 @@
 import { Instagram, Facebook, Youtube, MapPin, Phone, Mail } from "lucide-react";
-import { RESTAURANT } from "@/lib/restaurant";
+import { RESTAURANT, waLink } from "@/lib/restaurant";
 
 export function Footer() {
   return (
@@ -17,9 +17,9 @@ export function Footer() {
             {RESTAURANT.tagline}. A premium family dining destination near St. Paul Public School, Teghra.
           </p>
           <div className="mt-5 flex items-center gap-3">
-            <a href={RESTAURANT.socials.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary transition hover:bg-primary hover:text-primary-foreground"><Instagram size={16}/></a>
-            <a href={RESTAURANT.socials.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary transition hover:bg-primary hover:text-primary-foreground"><Facebook size={16}/></a>
-            <a href={RESTAURANT.socials.youtube} target="_blank" rel="noreferrer" aria-label="YouTube" className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary transition hover:bg-primary hover:text-primary-foreground"><Youtube size={16}/></a>
+            <a href={RESTAURANT.socials.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary transition hover:bg-primary hover:text-primary-foreground"><Instagram size={16}/></a>
+            <a href={RESTAURANT.socials.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary transition hover:bg-primary hover:text-primary-foreground"><Facebook size={16}/></a>
+            <a href={RESTAURANT.socials.youtube} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="grid h-10 w-10 place-items-center rounded-full border border-border text-primary transition hover:bg-primary hover:text-primary-foreground"><Youtube size={16}/></a>
           </div>
         </div>
 
@@ -51,9 +51,9 @@ export function Footer() {
           <p>
             Created with <span className="text-primary">♥</span> by{" "}
             <a
-              href="https://wa.me/916200907210"
+              href={waLink("Hi Saurav, I came from Rosahai Mahal website.")}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="font-semibold text-gradient-gold hover:underline"
             >
               Saurav (Monu)
