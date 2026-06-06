@@ -69,10 +69,10 @@ export function Menu() {
         {/* Grid */}
         <motion.div layout className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
-            {items.map((m) => (
+            {items.map((m, i) => (
               <motion.article
                 layout
-                key={m.name}
+                key={`${m.category}-${m.name}-${m.price}-${i}`}
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
@@ -118,7 +118,7 @@ export function Menu() {
                     <a
                       href={waLink(`Hi Rosahai Mahal, I'd like to order: ${m.name} (₹${m.price})`)}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary transition hover:bg-primary hover:text-primary-foreground"
                     >
                       Order

@@ -14,7 +14,7 @@ export function BookingContact() {
       return;
     }
     const msg = `Hello Rosahai Mahal, I'd like to book a table.\n\nName: ${form.name}\nPhone: ${form.phone}\nDate: ${form.date}\nTime: ${form.time}\nGuests: ${form.guests}\nNote: ${form.note}`;
-    window.open(waLink(msg), "_blank");
+    window.open(waLink(msg), "_blank", "noopener,noreferrer");
     toast.success("Opening WhatsApp to confirm your booking…");
   }
 
@@ -41,8 +41,9 @@ export function BookingContact() {
                 <Field label="Date" value={form.date} onChange={(v) => setForm({ ...form, date: v })} type="date" />
                 <Field label="Time" value={form.time} onChange={(v) => setForm({ ...form, time: v })} type="time" />
                 <div className="sm:col-span-2">
-                  <label className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">Guests</label>
+                  <label htmlFor="booking-guests" className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">Guests</label>
                   <select
+                    id="booking-guests"
                     value={form.guests}
                     onChange={(e) => setForm({ ...form, guests: e.target.value })}
                     className="w-full rounded-xl border border-border bg-card/60 px-4 py-3 text-sm outline-none focus:border-primary"
@@ -53,8 +54,9 @@ export function BookingContact() {
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">Special note</label>
+                  <label htmlFor="booking-note" className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">Special note</label>
                   <textarea
+                    id="booking-note"
                     value={form.note}
                     onChange={(e) => setForm({ ...form, note: e.target.value })}
                     rows={3}
@@ -101,10 +103,12 @@ export function BookingContact() {
 }
 
 function Field({ label, value, onChange, type = "text", placeholder }: { label: string; value: string; onChange: (v: string) => void; type?: string; placeholder?: string }) {
+  const id = `booking-${label.toLowerCase().replace(/\s+/g, "-")}`;
   return (
     <div>
-      <label className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">{label}</label>
+      <label htmlFor={id} className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">{label}</label>
       <input
+        id={id}
         type={type}
         value={value}
         placeholder={placeholder}
@@ -125,5 +129,5 @@ function InfoCard({ icon: Icon, title, lines, href }: { icon: typeof Mail; title
       ))}
     </div>
   );
-  return href ? <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noreferrer">{inner}</a> : inner;
+  return href ? <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{inner}</a> : inner;
 }

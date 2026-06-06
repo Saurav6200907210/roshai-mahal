@@ -97,7 +97,7 @@ export function Navbar() {
               ))}
               <li className="mt-2 flex gap-2">
                 <a href="#book" onClick={() => setOpen(false)} className="flex-1 rounded-full bg-gradient-gold py-2 text-center text-sm font-semibold text-primary-foreground">Book Table</a>
-                <a href="tel:+919000000000" className="grid h-10 w-10 place-items-center rounded-full border border-primary/40 text-primary"><Phone size={16}/></a>
+                <a href="tel:+919798507612" aria-label="Call Rosahai Mahal" className="grid h-10 w-10 place-items-center rounded-full border border-primary/40 text-primary"><Phone size={16}/></a>
               </li>
             </ul>
           </motion.div>
