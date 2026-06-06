@@ -38,7 +38,7 @@ export const RESTAURANT = {
 };
 
 export function waLink(text: string) {
-  return `https://web.whatsapp.com/send?phone=${RESTAURANT.whatsapp}&text=${encodeURIComponent(text)}`;
+  return `https://wa.me/${RESTAURANT.whatsapp}?text=${encodeURIComponent(text)}`;
 }
 
 export const VIDEOS = [
