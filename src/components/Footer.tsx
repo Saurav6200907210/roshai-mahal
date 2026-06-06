@@ -48,7 +48,17 @@ export function Footer() {
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-5 text-xs text-muted-foreground sm:flex-row sm:px-6">
           <p>© {new Date().getFullYear()} Rosahai Mahal Teghra · All rights reserved.</p>
-          <p>Crafted with <span className="text-primary">♥</span> in Begusarai, Bihar.</p>
+          <p>
+            Created with <span className="text-primary">♥</span> by{" "}
+            <a
+              href="https://wa.me/916200907210"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-gradient-gold hover:underline"
+            >
+              Saurav (Monu)
+            </a>
+          </p>
         </div>
       </div>
     </footer>
