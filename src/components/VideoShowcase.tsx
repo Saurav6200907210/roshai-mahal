@@ -58,9 +58,9 @@ function VideoCard({ src, title }: { src: string; title: string }) {
         muted={muted}
         loop
         playsInline
-        preload="metadata"
+        preload="none"
+        aria-label={title}
         className="aspect-[9/16] h-full w-full object-cover sm:aspect-video"
-        onClick={toggle}
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
 
