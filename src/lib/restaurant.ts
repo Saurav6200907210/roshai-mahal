@@ -52,7 +52,6 @@ export const VIDEOS = [
   { src: v5, title: "Chef's Special" },
 ];
 
-
 export const MENU_CARDS: { url: string; title: string }[] = [
   {
     url: menuImg,
@@ -1252,18 +1251,7 @@ export const CATEGORIES: Category[] = [
   "Chinese Veg Items",
 ];
 
-export const GALLERY = [
-  g1,
-  g2,
-  g3,
-  g4,
-  g5,
-  g6,
-  g7,
-  g8,
-  g9,
-  g10,
-];
+export const GALLERY = [g1, g2, g3, g4, g5, g6, g7, g8, g9, g10];
 
 export const TESTIMONIALS = [
   {
