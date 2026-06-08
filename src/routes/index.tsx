@@ -26,7 +26,7 @@ const SCHEMA = {
       "@type": ["LocalBusiness", "Restaurant"],
       "@id": "https://rasoi-mahal.com/#restaurant",
       name: "Rasoi Mahal Teghra",
-      image: "https://rasoi-mahal.com/gallery/image.png",
+      image: "https://rasoi-mahal.com/gallery/Screenshot 2026-06-08 085446.png",
       url: "https://rasoi-mahal.com",
       telephone: "+919798507612",
       priceRange: "₹₹",

@@ -4,19 +4,16 @@ import v3 from "@/assets/videos/WhatsApp Video 2026-06-03 at 7.36.17 AM (1).mp4"
 import v4 from "@/assets/videos/WhatsApp Video 2026-06-03 at 7.36.17 AM (2).mp4";
 import v5 from "@/assets/videos/WhatsApp Video 2026-06-03 at 7.36.18 AM.mp4";
 
-import g1 from "@/assets/gallery/image.png";
-import g2 from "@/assets/gallery/img 3.jpg";
-import g3 from "@/assets/gallery/img 4.jpg";
-import g4 from "@/assets/gallery/img 5.webp";
-import g5 from "@/assets/gallery/pic1.webp";
-
-
-
-import g6 from "@/assets/gallery/Screenshot 2026-06-08 085446.png";
-import g7 from "@/assets/gallery/Screenshot 2026-06-08 085540.png";
-import g8 from "@/assets/gallery/Screenshot 2026-06-08 085646.png";
-import g9 from "@/assets/gallery/Screenshot 2026-06-08 085746.png";
-import g10 from "@/assets/gallery/Screenshot 2026-06-08 085851.png";
+import g1 from "@/assets/gallery/Screenshot 2026-06-08 085446.png";
+import g2 from "@/assets/gallery/Screenshot 2026-06-08 085540.png";
+import g3 from "@/assets/gallery/Screenshot 2026-06-08 085646.png";
+import g4 from "@/assets/gallery/Screenshot 2026-06-08 085746.png";
+import g5 from "@/assets/gallery/Screenshot 2026-06-08 085851.png";
+import g6 from "@/assets/gallery/img 3.jpg";
+import g7 from "@/assets/gallery/img 4.jpg";
+import g8 from "@/assets/gallery/img 5.webp";
+import g9 from "@/assets/gallery/pic1.webp";
+import g10 from "@/assets/gallery/event.jpeg";
 
 import menuImg from "@/assets/gallery/ChatGPT Image Jun 8, 2026, 09_08_20 AM.png";
 import eventImg from "@/assets/gallery/event.jpeg";
