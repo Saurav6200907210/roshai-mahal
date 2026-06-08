@@ -73,14 +73,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Rosahai Mahal Teghra | Family Restaurant" },
-      { name: "description", content: "Premium family restaurant in Teghra, Begusarai for biryani, tandoor, Chinese, thali, events and table bookings." },
+      {
+        name: "description",
+        content:
+          "Premium family restaurant in Teghra, Begusarai for biryani, tandoor, Chinese, thali, events and table bookings.",
+      },
       { name: "author", content: "Rosahai Mahal Teghra" },
       { property: "og:title", content: "Rosahai Mahal Teghra | Family Restaurant" },
-      { property: "og:description", content: "Premium family restaurant in Teghra, Begusarai for biryani, tandoor, Chinese, thali, events and table bookings." },
+      {
+        property: "og:description",
+        content:
+          "Premium family restaurant in Teghra, Begusarai for biryani, tandoor, Chinese, thali, events and table bookings.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Rosahai Mahal Teghra | Family Restaurant" },
-      { name: "twitter:description", content: "Premium family restaurant in Teghra, Begusarai for biryani, tandoor, Chinese, thali, events and table bookings." },
+      {
+        name: "twitter:description",
+        content:
+          "Premium family restaurant in Teghra, Begusarai for biryani, tandoor, Chinese, thali, events and table bookings.",
+      },
     ],
     links: [
       {

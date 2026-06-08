@@ -30,7 +30,9 @@ export function Loader() {
             >
               Rosahai Mahal
             </motion.p>
-            <p className="mt-1 text-[10px] uppercase tracking-[0.4em] text-muted-foreground">Preparing your table…</p>
+            <p className="mt-1 text-[10px] uppercase tracking-[0.4em] text-muted-foreground">
+              Preparing your table…
+            </p>
           </div>
         </motion.div>
       )}

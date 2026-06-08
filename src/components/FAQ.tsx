@@ -28,7 +28,10 @@ export function FAQ() {
                     aria-expanded={isOpen}
                   >
                     <span className="font-medium">{f.q}</span>
-                    <ChevronDown className={`shrink-0 text-primary transition ${isOpen ? "rotate-180" : ""}`} size={18} />
+                    <ChevronDown
+                      className={`shrink-0 text-primary transition ${isOpen ? "rotate-180" : ""}`}
+                      size={18}
+                    />
                   </button>
                   <AnimatePresence initial={false}>
                     {isOpen && (

@@ -13,7 +13,8 @@ export function Gallery() {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIdx(null);
       if (e.key === "ArrowRight") setIdx((i) => (i === null ? i : (i + 1) % GALLERY.length));
-      if (e.key === "ArrowLeft") setIdx((i) => (i === null ? i : (i - 1 + GALLERY.length) % GALLERY.length));
+      if (e.key === "ArrowLeft")
+        setIdx((i) => (i === null ? i : (i - 1 + GALLERY.length) % GALLERY.length));
     };
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -48,6 +49,7 @@ export function Gallery() {
                   src={src}
                   alt={`Rosahai Mahal gallery ${i + 1}`}
                   loading="lazy"
+                  decoding="async"
                   width={900}
                   height={900}
                   className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
@@ -73,21 +75,30 @@ export function Gallery() {
             onClick={() => setIdx(null)}
           >
             <button
-              onClick={(e) => { e.stopPropagation(); setIdx(null); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIdx(null);
+              }}
               aria-label="Close"
               className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-border bg-background/70 text-foreground transition hover:bg-primary hover:text-primary-foreground"
             >
               <X size={18} />
             </button>
             <button
-              onClick={(e) => { e.stopPropagation(); setIdx((i) => (i === null ? i : (i - 1 + GALLERY.length) % GALLERY.length)); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIdx((i) => (i === null ? i : (i - 1 + GALLERY.length) % GALLERY.length));
+              }}
               aria-label="Previous"
               className="absolute left-3 top-1/2 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full border border-border bg-background/70 text-foreground transition hover:bg-primary hover:text-primary-foreground sm:left-6"
             >
               <ChevronLeft size={18} />
             </button>
             <button
-              onClick={(e) => { e.stopPropagation(); setIdx((i) => (i === null ? i : (i + 1) % GALLERY.length)); }}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIdx((i) => (i === null ? i : (i + 1) % GALLERY.length));
+              }}
               aria-label="Next"
               className="absolute right-3 top-1/2 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full border border-border bg-background/70 text-foreground transition hover:bg-primary hover:text-primary-foreground sm:right-6"
             >

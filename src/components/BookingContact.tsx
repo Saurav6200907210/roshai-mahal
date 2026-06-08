@@ -5,7 +5,14 @@ import { RESTAURANT, waLink } from "@/lib/restaurant";
 import { Reveal } from "./Reveal";
 
 export function BookingContact() {
-  const [form, setForm] = useState({ name: "", phone: "", date: "", time: "", guests: "2", note: "" });
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+    guests: "2",
+    note: "",
+  });
 
   function submit(e: FormEvent) {
     e.preventDefault();
@@ -31,30 +38,69 @@ export function BookingContact() {
         <div className="mt-14 grid gap-8 lg:grid-cols-2">
           {/* Booking form */}
           <Reveal>
-            <form id="book" onSubmit={submit} className="rounded-3xl glass-strong p-6 sm:p-8 shadow-deep">
+            <form
+              id="book"
+              onSubmit={submit}
+              className="rounded-3xl glass-strong p-6 sm:p-8 shadow-deep"
+            >
               <h3 className="font-display text-2xl">Book a Table</h3>
-              <p className="mt-1 text-sm text-muted-foreground">We'll confirm instantly on WhatsApp.</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                We'll confirm instantly on WhatsApp.
+              </p>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                <Field label="Full Name" value={form.name} onChange={(v) => setForm({ ...form, name: v })} placeholder="Your name" />
-                <Field label="Phone" value={form.phone} onChange={(v) => setForm({ ...form, phone: v })} placeholder="10-digit number" type="tel" />
-                <Field label="Date" value={form.date} onChange={(v) => setForm({ ...form, date: v })} type="date" />
-                <Field label="Time" value={form.time} onChange={(v) => setForm({ ...form, time: v })} type="time" />
+                <Field
+                  label="Full Name"
+                  value={form.name}
+                  onChange={(v) => setForm({ ...form, name: v })}
+                  placeholder="Your name"
+                />
+                <Field
+                  label="Phone"
+                  value={form.phone}
+                  onChange={(v) => setForm({ ...form, phone: v })}
+                  placeholder="10-digit number"
+                  type="tel"
+                />
+                <Field
+                  label="Date"
+                  value={form.date}
+                  onChange={(v) => setForm({ ...form, date: v })}
+                  type="date"
+                />
+                <Field
+                  label="Time"
+                  value={form.time}
+                  onChange={(v) => setForm({ ...form, time: v })}
+                  type="time"
+                />
                 <div className="sm:col-span-2">
-                  <label htmlFor="booking-guests" className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">Guests</label>
+                  <label
+                    htmlFor="booking-guests"
+                    className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground"
+                  >
+                    Guests
+                  </label>
                   <select
                     id="booking-guests"
                     value={form.guests}
                     onChange={(e) => setForm({ ...form, guests: e.target.value })}
                     className="w-full rounded-xl border border-border bg-card/60 px-4 py-3 text-sm outline-none focus:border-primary"
                   >
-                    {["1","2","3","4","5","6","8","10+"].map((n) => (
-                      <option key={n} value={n}>{n} guest{n === "1" ? "" : "s"}</option>
+                    {["1", "2", "3", "4", "5", "6", "8", "10+"].map((n) => (
+                      <option key={n} value={n}>
+                        {n} guest{n === "1" ? "" : "s"}
+                      </option>
                     ))}
                   </select>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="booking-note" className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">Special note</label>
+                  <label
+                    htmlFor="booking-note"
+                    className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground"
+                  >
+                    Special note
+                  </label>
                   <textarea
                     id="booking-note"
                     value={form.note}
@@ -79,9 +125,24 @@ export function BookingContact() {
           <Reveal delay={0.1}>
             <div className="flex h-full flex-col gap-4">
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                <InfoCard icon={MapPin} title="Address" lines={[RESTAURANT.address]} href={RESTAURANT.mapsLink} />
-                <InfoCard icon={Phone} title="Call us" lines={[RESTAURANT.phone]} href={`tel:${RESTAURANT.phoneRaw}`} />
-                <InfoCard icon={Mail} title="Email" lines={[RESTAURANT.email]} href={`mailto:${RESTAURANT.email}`} />
+                <InfoCard
+                  icon={MapPin}
+                  title="Address"
+                  lines={[RESTAURANT.address]}
+                  href={RESTAURANT.mapsLink}
+                />
+                <InfoCard
+                  icon={Phone}
+                  title="Call us"
+                  lines={[RESTAURANT.phone]}
+                  href={`tel:${RESTAURANT.phoneRaw}`}
+                />
+                <InfoCard
+                  icon={Mail}
+                  title="Email"
+                  lines={[RESTAURANT.email]}
+                  href={`mailto:${RESTAURANT.email}`}
+                />
                 <InfoCard icon={Clock} title="Open Daily" lines={[RESTAURANT.hours]} />
               </div>
 
@@ -102,11 +163,28 @@ export function BookingContact() {
   );
 }
 
-function Field({ label, value, onChange, type = "text", placeholder }: { label: string; value: string; onChange: (v: string) => void; type?: string; placeholder?: string }) {
+function Field({
+  label,
+  value,
+  onChange,
+  type = "text",
+  placeholder,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  type?: string;
+  placeholder?: string;
+}) {
   const id = `booking-${label.toLowerCase().replace(/\s+/g, "-")}`;
   return (
     <div>
-      <label htmlFor={id} className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground">{label}</label>
+      <label
+        htmlFor={id}
+        className="mb-1 block text-xs uppercase tracking-widest text-muted-foreground"
+      >
+        {label}
+      </label>
       <input
         id={id}
         type={type}
@@ -119,15 +197,37 @@ function Field({ label, value, onChange, type = "text", placeholder }: { label: 
   );
 }
 
-function InfoCard({ icon: Icon, title, lines, href }: { icon: typeof Mail; title: string; lines: string[]; href?: string }) {
+function InfoCard({
+  icon: Icon,
+  title,
+  lines,
+  href,
+}: {
+  icon: typeof Mail;
+  title: string;
+  lines: string[];
+  href?: string;
+}) {
   const inner = (
     <div className="h-full rounded-2xl glass p-5 transition hover:-translate-y-1 hover:shadow-gold">
       <Icon className="text-primary" size={20} />
       <div className="mt-3 text-xs uppercase tracking-widest text-muted-foreground">{title}</div>
       {lines.map((l) => (
-        <p key={l} className="mt-1 text-sm text-foreground/90">{l}</p>
+        <p key={l} className="mt-1 text-sm text-foreground/90">
+          {l}
+        </p>
       ))}
     </div>
   );
-  return href ? <a href={href} target={href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">{inner}</a> : inner;
+  return href ? (
+    <a
+      href={href}
+      target={href.startsWith("http") ? "_blank" : undefined}
+      rel="noopener noreferrer"
+    >
+      {inner}
+    </a>
+  ) : (
+    inner
+  );
 }

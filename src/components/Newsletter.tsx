@@ -16,7 +16,8 @@ export function Newsletter() {
               Get <span className="text-gradient-gold">royal offers</span> in your inbox
             </h3>
             <p className="mx-auto mt-3 max-w-md text-sm text-muted-foreground">
-              Festive menus, private booking deals and chef's specials — straight from Rosahai Mahal.
+              Festive menus, private booking deals and chef's specials — straight from Rosahai
+              Mahal.
             </p>
             <form
               onSubmit={(e: FormEvent) => {
@@ -28,7 +29,10 @@ export function Newsletter() {
               className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row"
             >
               <div className="relative flex-1">
-                <Mail className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={16} />
+                <Mail
+                  className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
+                  size={16}
+                />
                 <input
                   type="email"
                   required

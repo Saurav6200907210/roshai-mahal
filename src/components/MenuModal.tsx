@@ -36,7 +36,9 @@ export function MenuModal({ open, onClose }: { open: boolean; onClose: () => voi
           >
             <div className="flex items-center justify-between gap-3 border-b border-border p-4 sm:p-5">
               <div>
-                <div className="text-[10px] uppercase tracking-[0.3em] text-primary">Menu & Brochure</div>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-primary">
+                  Menu & Brochure
+                </div>
                 <div className="font-display text-xl">Rosahai Mahal Teghra</div>
               </div>
               <button
@@ -51,11 +53,27 @@ export function MenuModal({ open, onClose }: { open: boolean; onClose: () => voi
             <div className="max-h-[60vh] overflow-y-auto p-4 sm:p-6">
               <div className="grid gap-5 md:grid-cols-2">
                 {MENU_CARDS.map((c) => (
-                  <a key={c.url} href={c.url} target="_blank" rel="noopener noreferrer" className="group block overflow-hidden rounded-2xl border border-border bg-background/40">
-                    <img src={c.url} alt={c.title} loading="lazy" width={900} height={1200} className="h-auto w-full object-contain transition duration-500 group-hover:scale-[1.02]" />
+                  <a
+                    key={c.url}
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block overflow-hidden rounded-2xl border border-border bg-background/40"
+                  >
+                    <img
+                      src={c.url}
+                      alt={c.title}
+                      loading="lazy"
+                      decoding="async"
+                      width={900}
+                      height={1200}
+                      className="h-auto w-full object-contain transition duration-500 group-hover:scale-[1.02]"
+                    />
                     <div className="flex items-center justify-between gap-2 p-3 text-sm">
                       <span className="text-foreground/90">{c.title}</span>
-                      <span className="inline-flex items-center gap-1 text-xs text-primary"><Download size={12}/> Open</span>
+                      <span className="inline-flex items-center gap-1 text-xs text-primary">
+                        <Download size={12} /> Open
+                      </span>
                     </div>
                   </a>
                 ))}

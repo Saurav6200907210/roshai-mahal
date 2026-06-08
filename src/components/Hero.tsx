@@ -18,6 +18,7 @@ export function Hero() {
           width={1920}
           height={1080}
           fetchPriority="high"
+          decoding="async"
           className="h-full w-full scale-105 object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/50 to-background" />
@@ -68,8 +69,8 @@ export function Hero() {
           transition={{ delay: 0.55, duration: 0.8 }}
           className="mt-6 max-w-2xl text-balance text-base text-muted-foreground sm:text-lg"
         >
-          {RESTAURANT.tagline}. A royal dining experience in the heart of Begusarai —
-          authentic Indian flavours, cinematic interiors and warm family hospitality.
+          {RESTAURANT.tagline}. A royal dining experience in the heart of Begusarai — authentic
+          Indian flavours, cinematic interiors and warm family hospitality.
         </motion.p>
 
         <motion.div

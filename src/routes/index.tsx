@@ -15,36 +15,75 @@ import { FloatingActions } from "@/components/FloatingActions";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { RESTAURANT } from "@/lib/restaurant";
 
-const TITLE = "Rosahai Mahal Teghra | Family Restaurant";
-const DESC = "Rosahai Mahal Teghra — a luxury family restaurant near St. Paul Public School, Teghra, Begusarai. Royal biryanis, tandoor, Chinese, thali & desserts. Book a table or order on WhatsApp.";
+const TITLE = "Best Family Restaurant in Teghra | Rasoi Mahal Banquet Hall";
+const DESC =
+  "Visit Rasoi Mahal Teghra, the best family AC restaurant in Begusarai. Enjoy top Indian & Chinese food, or book our premium banquet hall for weddings & parties.";
 
 const SCHEMA = {
   "@context": "https://schema.org",
-  "@type": "Restaurant",
-  name: RESTAURANT.name,
-  image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=70",
-  servesCuisine: ["Indian", "Biryani", "Tandoor", "Chinese", "South Indian", "Fast Food"],
-  priceRange: "₹₹",
-  telephone: RESTAURANT.phone,
-  email: RESTAURANT.email,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Near St. Paul Public School",
-    addressLocality: "Teghra",
-    addressRegion: "Bihar",
-    postalCode: "851133",
-    addressCountry: "IN",
-  },
-  openingHours: "Mo-Su 11:00-23:00",
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.8", reviewCount: "320" },
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "Restaurant"],
+      "@id": "https://rasoi-mahal.com/#restaurant",
+      name: "Rasoi Mahal Teghra",
+      image: "https://rasoi-mahal.com/gallery/image.png",
+      url: "https://rasoi-mahal.com",
+      telephone: "+919798507612",
+      priceRange: "₹₹",
+      servesCuisine: ["Indian", "Chinese", "Biryani", "Tandoor"],
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Station Road, Near St. Paul Public School",
+        addressLocality: "Teghra",
+        addressRegion: "Bihar",
+        postalCode: "851133",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: "25.4418",
+        longitude: "85.9683",
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "11:00",
+        closes: "23:00",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Which is the best family restaurant in Teghra?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Rasoi Mahal Teghra is widely considered the best family AC restaurant in Teghra, offering a mix of Indian, Chinese, and Tandoori cuisines in a premium dining environment.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does Rasoi Mahal have a banquet hall for birthday parties and weddings?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes, Rasoi Mahal features a luxurious banquet hall perfect for wedding venues, birthday parties, and corporate events in Teghra.",
+          },
+        },
+      ],
+    },
+  ],
 };
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "keywords", content: "restaurant Teghra, Begusarai restaurant, Rosahai Mahal, biryani Teghra, family restaurant Bihar, table booking Teghra, St Paul Teghra restaurant" },
+      {
+        name: "keywords",
+        content:
+          "Best Restaurant in Teghra, Family Restaurant in Teghra, AC Restaurant in Teghra, Banquet Hall in Teghra, Best Food in Teghra, Birthday Party Venue in Teghra, Wedding Venue in Teghra, Restaurant Near Teghra Railway Station, Rasoi Mahal Teghra",
+      },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "restaurant" },
@@ -58,9 +97,7 @@ export const Route = createFileRoute("/")({
       { rel: "canonical", href: "/" },
       { rel: "preconnect", href: "https://images.unsplash.com" },
     ],
-    scripts: [
-      { type: "application/ld+json", children: JSON.stringify(SCHEMA) },
-    ],
+    scripts: [{ type: "application/ld+json", children: JSON.stringify(SCHEMA) }],
   }),
   component: Index,
 });

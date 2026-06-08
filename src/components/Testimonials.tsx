@@ -20,10 +20,7 @@ export function Testimonials() {
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
         <div className="flex w-max gap-5 animate-marquee">
           {loop.map((t, i) => (
-            <article
-              key={i}
-              className="w-[320px] shrink-0 rounded-2xl glass p-6 sm:w-[380px]"
-            >
+            <article key={i} className="w-[320px] shrink-0 rounded-2xl glass p-6 sm:w-[380px]">
               <Quote className="text-primary/60" />
               <p className="mt-3 text-sm leading-relaxed text-foreground/90">"{t.text}"</p>
               <div className="mt-4 flex items-center gap-1 text-primary">

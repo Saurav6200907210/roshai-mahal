@@ -118,6 +118,12 @@ html {
     color: oklch(0.98 0 0);
   }
 
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.8;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar { width: 8px; height: 8px; }
   ::-webkit-scrollbar-track { background: oklch(0.13 0.012 30); }

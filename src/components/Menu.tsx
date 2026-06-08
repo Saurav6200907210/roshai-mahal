@@ -12,7 +12,7 @@ export function Menu() {
     return MENU.filter(
       (m) =>
         (cat === "All" || m.category === cat) &&
-        (q.trim() === "" || m.name.toLowerCase().includes(q.toLowerCase()))
+        (q.trim() === "" || m.name.toLowerCase().includes(q.toLowerCase())),
     );
   }, [cat, q]);
 
@@ -33,7 +33,10 @@ export function Menu() {
         <Reveal delay={0.1}>
           <div className="mt-10 flex flex-col items-center gap-4">
             <div className="relative w-full max-w-md">
-              <Search className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={16} />
+              <Search
+                className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground"
+                size={16}
+              />
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
@@ -49,7 +52,9 @@ export function Menu() {
                   key={c}
                   onClick={() => setCat(c)}
                   className={`relative rounded-full px-4 py-1.5 text-xs font-medium uppercase tracking-wider transition ${
-                    cat === c ? "text-primary-foreground" : "text-muted-foreground hover:text-primary"
+                    cat === c
+                      ? "text-primary-foreground"
+                      : "text-muted-foreground hover:text-primary"
                   }`}
                 >
                   {cat === c && (
@@ -84,6 +89,7 @@ export function Menu() {
                     src={m.image}
                     alt={m.name}
                     loading="lazy"
+                    decoding="async"
                     width={800}
                     height={600}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
@@ -92,11 +98,15 @@ export function Menu() {
                   <div className="absolute left-3 top-3 flex gap-2">
                     <span
                       className={`grid h-6 w-6 place-items-center rounded-sm border ${
-                        m.veg ? "border-emerald-500/70 text-emerald-400" : "border-red-500/70 text-red-400"
+                        m.veg
+                          ? "border-emerald-500/70 text-emerald-400"
+                          : "border-red-500/70 text-red-400"
                       } bg-background/80`}
                       aria-label={m.veg ? "Vegetarian" : "Non-vegetarian"}
                     >
-                      <span className={`block h-2 w-2 rounded-full ${m.veg ? "bg-emerald-400" : "bg-red-400"}`} />
+                      <span
+                        className={`block h-2 w-2 rounded-full ${m.veg ? "bg-emerald-400" : "bg-red-400"}`}
+                      />
                     </span>
                     {m.popular && (
                       <span className="inline-flex items-center gap-1 rounded-full bg-gradient-gold px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground">
@@ -108,9 +118,13 @@ export function Menu() {
                 <div className="p-5">
                   <div className="flex items-start justify-between gap-3">
                     <h3 className="font-display text-lg leading-tight">{m.name}</h3>
-                    <span className="shrink-0 text-gradient-gold font-display text-lg whitespace-nowrap">₹{m.price}</span>
+                    <span className="shrink-0 text-gradient-gold font-display text-lg whitespace-nowrap">
+                      ₹{m.price}
+                    </span>
                   </div>
-                  {m.desc && <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{m.desc}</p>}
+                  {m.desc && (
+                    <p className="mt-2 text-sm text-muted-foreground line-clamp-2">{m.desc}</p>
+                  )}
                   <div className="mt-4 flex items-center justify-between">
                     <span className="inline-flex items-center gap-1 text-[11px] uppercase tracking-widest text-muted-foreground">
                       <Leaf size={12} /> {m.category}
@@ -131,7 +145,9 @@ export function Menu() {
         </motion.div>
 
         {items.length === 0 && (
-          <p className="mt-10 text-center text-muted-foreground">No dishes found. Try a different search.</p>
+          <p className="mt-10 text-center text-muted-foreground">
+            No dishes found. Try a different search.
+          </p>
         )}
       </div>
     </section>
