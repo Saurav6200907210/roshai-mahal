@@ -15,7 +15,7 @@ import g8 from "@/assets/gallery/img 5.webp";
 import g9 from "@/assets/gallery/pic1.webp";
 import g10 from "@/assets/gallery/event.jpeg";
 
-import menuImg from "@/assets/gallery/ChatGPT Image Jun 8, 2026, 09_08_20 AM.png";
+import menuImg from "@/assets/gallery/menu-card.png";
 import eventImg from "@/assets/gallery/event.jpeg";
 
 export const RESTAURANT = {
