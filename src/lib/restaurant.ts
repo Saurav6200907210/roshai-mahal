@@ -28,7 +28,7 @@ export const RESTAURANT = {
   phoneAlt: ["+91 96933 14686", "+91 76339 89833", "+91 62053 48886", "+91 77356 54659"],
   whatsapp: "916205348886",
   whatsappDisplay: "+91 97985 07612",
-  email: "hello@rosahaimahal.com",
+  email: "rasoimahalteghra@gmail.com",
   hours: "11:00 AM – 11:00 PM (All days)",
   mapsEmbed:
     "https://www.google.com/maps?q=St.+Paul+Public+School+Teghra+Begusarai+Bihar&output=embed",
