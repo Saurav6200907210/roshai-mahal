@@ -4,6 +4,10 @@ import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
 import { RESTAURANT, waLink } from "@/lib/restaurant";
 import { Reveal } from "./Reveal";
 
+const mailHref = `mailto:${RESTAURANT.email}?subject=${encodeURIComponent(
+  "Booking enquiry for Rasoi Mahal Teghra",
+)}&body=${encodeURIComponent("Hello Rasoi Mahal Teghra, I would like to enquire about booking.")}`;
+
 export function BookingContact() {
   const [form, setForm] = useState({
     name: "",
@@ -137,12 +141,7 @@ export function BookingContact() {
                   lines={[RESTAURANT.phone]}
                   href={`tel:${RESTAURANT.phoneRaw}`}
                 />
-                <InfoCard
-                  icon={Mail}
-                  title="Email"
-                  lines={[RESTAURANT.email]}
-                  href={`mailto:${RESTAURANT.email}`}
-                />
+                <InfoCard icon={Mail} title="Email" lines={[RESTAURANT.email]} href={mailHref} />
                 <InfoCard icon={Clock} title="Open Daily" lines={[RESTAURANT.hours]} />
               </div>
 

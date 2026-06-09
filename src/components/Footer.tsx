@@ -1,6 +1,10 @@
 import { Instagram, Facebook, Youtube, MapPin, Phone, Mail } from "lucide-react";
 import { RESTAURANT, waLink } from "@/lib/restaurant";
 
+const mailHref = `mailto:${RESTAURANT.email}?subject=${encodeURIComponent(
+  "Enquiry for Rasoi Mahal Teghra",
+)}&body=${encodeURIComponent("Hello Rasoi Mahal Teghra, I would like to know more.")}`;
+
 export function Footer() {
   return (
     <footer className="relative mt-10 border-t border-border bg-gradient-luxe">
@@ -88,7 +92,7 @@ export function Footer() {
             </li>
             <li className="flex gap-2">
               <Mail size={16} className="mt-0.5 text-primary" />
-              <a href={`mailto:${RESTAURANT.email}`}>{RESTAURANT.email}</a>
+              <a href={mailHref}>{RESTAURANT.email}</a>
             </li>
           </ul>
         </div>

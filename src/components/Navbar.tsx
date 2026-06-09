@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
 
 const LINKS = [
@@ -24,10 +23,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.2, 0.8, 0.2, 1] }}
+    <header
       className={`fixed inset-x-0 top-3 z-50 mx-auto w-[min(96%,1200px)] rounded-2xl transition-all duration-500 ${
         scrolled ? "glass-strong shadow-deep" : "glass"
       }`}
@@ -46,14 +42,13 @@ export function Navbar() {
         </a>
 
         <ul className="hidden items-center gap-7 md:flex">
-          {LINKS.map((l) => (
-            <li key={l.href}>
+          {LINKS.map((link) => (
+            <li key={link.href}>
               <a
-                href={l.href}
+                href={link.href}
                 className="relative text-sm font-medium text-foreground/85 transition hover:text-primary"
               >
-                {l.label}
-                <span className="absolute -bottom-1 left-0 h-px w-0 bg-gradient-gold transition-all duration-300 group-hover:w-full" />
+                {link.label}
               </a>
             </li>
           ))}
@@ -61,7 +56,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="#book"
+            href="#contact"
             className="rounded-full bg-gradient-gold px-5 py-2 text-sm font-semibold text-primary-foreground shadow-gold transition hover:scale-105"
           >
             Book Table
@@ -77,46 +72,39 @@ export function Navbar() {
         </button>
       </nav>
 
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden md:hidden"
-          >
-            <ul className="flex flex-col gap-1 px-4 pb-4">
-              {LINKS.map((l) => (
-                <li key={l.href}>
-                  <a
-                    onClick={() => setOpen(false)}
-                    href={l.href}
-                    className="block rounded-lg px-3 py-2 text-sm text-foreground/85 hover:bg-primary/10 hover:text-primary"
-                  >
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-              <li className="mt-2 flex gap-2">
+      {open && (
+        <div className="animate-fade-up overflow-hidden md:hidden">
+          <ul className="flex flex-col gap-1 px-4 pb-4">
+            {LINKS.map((link) => (
+              <li key={link.href}>
                 <a
-                  href="#book"
                   onClick={() => setOpen(false)}
-                  className="flex-1 rounded-full bg-gradient-gold py-2 text-center text-sm font-semibold text-primary-foreground"
+                  href={link.href}
+                  className="block rounded-lg px-3 py-2 text-sm text-foreground/85 hover:bg-primary/10 hover:text-primary"
                 >
-                  Book Table
-                </a>
-                <a
-                  href="tel:+919798507612"
-                  aria-label="Call Rosahai Mahal"
-                  className="grid h-10 w-10 place-items-center rounded-full border border-primary/40 text-primary"
-                >
-                  <Phone size={16} />
+                  {link.label}
                 </a>
               </li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.header>
+            ))}
+            <li className="mt-2 flex gap-2">
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="flex-1 rounded-full bg-gradient-gold py-2 text-center text-sm font-semibold text-primary-foreground"
+              >
+                Book Table
+              </a>
+              <a
+                href="tel:+919798507612"
+                aria-label="Call Rosahai Mahal"
+                className="grid h-10 w-10 place-items-center rounded-full border border-primary/40 text-primary"
+              >
+                <Phone size={16} />
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
+    </header>
   );
 }
